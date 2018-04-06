@@ -150,15 +150,9 @@ int bitAnd(int x, int y) {
  *   Rating: 2
  */
 int getByte(int x, int n) {
-
-
-
-
-
-
-
-  return 2;
-
+    int offset = n << 3;
+    int mask = 0xff;
+    return mask & (x >> offset);
 }
 /* 
  * logicalShift - shift x to the right by n, using a logical shift
